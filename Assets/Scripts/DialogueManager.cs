@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI DialogueText;
+    public Animator animator;
+
     public Queue <string> sentences;
 
     // Start is called before the first frame update
@@ -19,7 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue)
     {
-        
+        animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
 
         sentences.Clear();
@@ -46,8 +48,8 @@ public class DialogueManager : MonoBehaviour
 
         void EndDialogue ()
         {
-            Debug.Log("End pf convisation.");
-        }
+        animator.SetBool("IsOpen", false);
+    }
 
     
 
