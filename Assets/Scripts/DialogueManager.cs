@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
-    public TextMeshProUGUI DialogueText;
+    public TextMeshProUGUI dialogueText;
     public Animator animator;
 
     public Queue <string> sentences;
@@ -50,18 +50,18 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
-        DialogueText.text = "";
+        dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            DialogueText.text += letter;
+            dialogueText.text += letter;
             yield return null;
         }
     }
 
-        void EndDialogue ()
-        {
-        animator.SetBool("IsOpen", false);
-        }
+    void EndDialogue ()
+    {
+    animator.SetBool("IsOpen", false);
+    }
 
     
 
