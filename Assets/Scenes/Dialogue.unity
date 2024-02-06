@@ -986,7 +986,7 @@ MonoBehaviour:
     sentences:
     - Hello there I'm Tutorial
     - I'm here to guide you through the game
-    - I'm here to guide you through the game
+    - Have Fun
 --- !u!114 &1147075436
 MonoBehaviour:
   m_ObjectHideFlags: 0

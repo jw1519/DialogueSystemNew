@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+//Dialogue can be set in the inspector
 public class Dialogue
 {
     public string name;
