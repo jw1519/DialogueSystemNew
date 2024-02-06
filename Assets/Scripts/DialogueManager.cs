@@ -19,9 +19,9 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue (Dialogue dialogue) 
     {
-        animator.SetBool("IsOpen", true);
+        animator.SetBool("IsOpen", true); //the box for the dialogue is animated in
         nameText.text = dialogue.name;
 
         sentences.Clear();
@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void DisplayNextSentence()
+    public void DisplayNextSentence() 
     {
         if (sentences.Count == 0)
         {
